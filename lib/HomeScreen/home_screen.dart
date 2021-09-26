@@ -7,8 +7,27 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text("First app"),
-          elevation: 0.0,
+          backgroundColor: Colors.purple,
+          // elevation: 0.0,
         ),
-        body: HomeBannerScreen());
+        body: Container(
+          //color: Colors.red,
+          child: ListView(
+            children: [
+              HomeBannerScreen(),
+              HomeBannerScreen(),
+              HomeBannerScreen(),
+              HomeBannerScreen(),
+              HomeBannerScreen(),
+              HomeBannerScreen(),
+              HomeBannerScreen(),
+              HomeBannerScreen(),
+              HomeBannerScreen(),
+              HomeBannerScreen(),
+            ],
+          ),
+        )
+        //HomeBannerScreen(),
+        );
   }
 }

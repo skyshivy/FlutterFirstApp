@@ -3,8 +3,12 @@ import 'HomeScreen/home_screen.dart';
 
 void main() {
   // main app test commit
-  runApp(MaterialApp(
+  runApp(
+    MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "First App",
-      home: HomeScreen()));
+      home: HomeScreen(),
+      //Text("sky"), //HomeScreen(),
+    ),
+  );
 }
