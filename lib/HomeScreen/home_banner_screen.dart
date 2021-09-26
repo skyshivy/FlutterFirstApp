@@ -22,7 +22,7 @@ class HomeBannerScreen extends StatelessWidget {
             ),
             width: MediaQuery.of(context).size.width - 40,
             child:
-                Image.network("https://picsum.photos/200/200/?blur=$index+1"),
+                Image.network("https://picsum.photos/330/200/?blur=$index+1"),
           );
         },
       ),
