@@ -1,6 +1,20 @@
 import 'package:flutter/material.dart';
 
-class HomeTopTab extends StatelessWidget {
+// class HomeTopTab extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return myAppTab();
+//   }
+// }
+
+class myAppTab extends StatefulWidget {
+  @override
+  _myAppState createState() => _myAppState();
+}
+
+class _myAppState extends State<myAppTab> {
+  int selected = 0;
+  final tabItems = ["New Release", "Just For You"];
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -8,7 +22,7 @@ class HomeTopTab extends StatelessWidget {
       height: 40,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount: 6,
+        itemCount: tabItems.length,
         itemBuilder: (context, i) {
           return Container(
             padding: EdgeInsets.symmetric(horizontal: 6, vertical: 5),
@@ -16,7 +30,7 @@ class HomeTopTab extends StatelessWidget {
               height: 35,
               child: Container(
                 decoration: BoxDecoration(
-                  color: i == 0 ? Colors.blue : Colors.white,
+                  color: i == selected ? Colors.blue : Colors.white,
                   borderRadius: BorderRadius.all(
                     Radius.circular(5),
                   ),
@@ -33,13 +47,20 @@ class HomeTopTab extends StatelessWidget {
                   // ]
                 ),
                 child: Container(
-                  padding: EdgeInsets.all(5),
+                  padding: EdgeInsets.all(0),
                   child: Container(
                     padding: EdgeInsets.symmetric(horizontal: 5),
-                    child: Text(
-                      "Tab Views",
-                      style: TextStyle(
-                          color: i == 0 ? Colors.white : Colors.black),
+                    child: MaterialButton(
+                      child: Text(tabItems[i]),
+                      onPressed: () {
+                        setState(() {
+                          selected = i;
+                        });
+
+                        print("tapped $selected)");
+                        print("tapped i $i)");
+                      },
+                      minWidth: 10,
                     ),
                   ),
                 ),
