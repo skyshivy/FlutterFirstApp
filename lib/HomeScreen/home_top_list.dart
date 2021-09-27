@@ -15,7 +15,7 @@ class HomeTopList extends StatelessWidget {
               children: [
                 SizedBox(width: index == 0 ? 20 : 10),
                 //Text("Index = $index"),
-                GridCell(),
+                TuneCell(),
               ],
             ),
           );
@@ -25,7 +25,7 @@ class HomeTopList extends StatelessWidget {
   }
 }
 
-class GridCell extends StatelessWidget {
+class TuneCell extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

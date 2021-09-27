@@ -1,4 +1,6 @@
 import 'package:first_flutter_app/HomeScreen/home_banner_screen.dart';
+import 'package:first_flutter_app/HomeScreen/home_top_list.dart';
+import 'package:first_flutter_app/HomeScreen/home_top_tab.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -15,15 +17,15 @@ class HomeScreen extends StatelessWidget {
           child: ListView(
             children: [
               HomeBannerScreen(),
-              HomeBannerScreen(),
-              HomeBannerScreen(),
-              HomeBannerScreen(),
-              HomeBannerScreen(),
-              HomeBannerScreen(),
-              HomeBannerScreen(),
-              HomeBannerScreen(),
-              HomeBannerScreen(),
-              HomeBannerScreen(),
+              //SizedBox(height: 40),
+              HomeTopTab(),
+              SizedBox(height: 10),
+              HomeTopList(),
+              SizedBox(height: 40),
+              HomeTopList(),
+              SizedBox(height: 40),
+              HomeTopList(),
+              SizedBox(height: 40),
             ],
           ),
         )
