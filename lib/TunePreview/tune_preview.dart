@@ -7,8 +7,7 @@ class TunePreview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        //height: 300,
-
+        //height: 300
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(20),
@@ -20,16 +19,17 @@ class TunePreview extends StatelessWidget {
             ),
           ],
         ),
-        child: Center(
-          child: Text(
-            "Please create Tune preview UI hereasasadas as asdad.",
-            style: TextStyle(
-                color: Colors.pink,
-                fontWeight: FontWeight.bold,
-                fontSize: 20.0),
-            textAlign: TextAlign.center,
-          ),
+        child: Container(
+          child: TunePreViewButton(),
         ));
     //HomeBannerScreen(),
+  }
+}
+
+// ignore: use_key_in_widget_constructors
+class TunePreViewButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Text("data");
   }
 }
