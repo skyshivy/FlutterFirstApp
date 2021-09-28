@@ -11,9 +11,8 @@ class HomeTopList extends StatelessWidget {
             context: context,
             builder: (context) => Container(
                   color: Colors.transparent,
-                  //height: 500,
                   child: TunePreview(
-                    title: "HomeTopList cell tap",
+                    title: "HomeTopList cell tap2",
                   ),
                 ));
       },

@@ -21,7 +21,7 @@ class HomeBannerScreen extends StatelessWidget {
               padding: EdgeInsets.all(5),
               child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.red,
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: [
                       BoxShadow(
