@@ -1,4 +1,5 @@
 import 'package:first_flutter_app/HomeScreen/home_banner_screen.dart';
+import 'package:first_flutter_app/HomeScreen/home_category.dart';
 import 'package:first_flutter_app/HomeScreen/home_top_list.dart';
 import 'package:first_flutter_app/HomeScreen/home_top_tab.dart';
 import 'package:flutter/material.dart';
@@ -24,11 +25,12 @@ class HomeScreen extends StatelessWidget {
               }),
               SizedBox(height: 10),
               HomeTopList(),
-              SizedBox(height: 40),
-              HomeTopList(),
-              SizedBox(height: 40),
-              HomeTopList(),
-              SizedBox(height: 40),
+              // SizedBox(height: 40),
+              // HomeTopList(),
+              // SizedBox(height: 40),
+              // HomeTopList(),
+              // SizedBox(height: 40),
+              HomeCategory(),
             ],
           ),
         )
