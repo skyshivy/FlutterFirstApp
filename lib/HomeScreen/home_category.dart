@@ -16,15 +16,19 @@ class HomeCategory extends StatelessWidget {
             SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemBuilder: (context, index) {
           return Container(
-            padding: EdgeInsets.all(5),
-            child: Container(
-              padding: EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
-                color: Colors.pink,
-              ),
-            ),
-          );
+              padding: EdgeInsets.all(5),
+              child: GestureDetector(
+                onTap: () {
+                  print("category tapped $index");
+                },
+                child: Container(
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    color: Colors.pink,
+                  ),
+                ),
+              ));
         },
       ),
     );
