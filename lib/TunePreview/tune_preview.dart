@@ -1,23 +1,27 @@
 import 'package:flutter/material.dart';
 
 class TunePreview extends StatelessWidget {
+  final String title;
+
+  const TunePreview({Key? key, required this.title}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Tune Preview"),
+          title: Text(title),
           backgroundColor: Colors.pink,
           // elevation: 0.0,
         ),
-        body: Container(
-          //color: Colors.red,
-          child: ListView(
-            children: [
-              Text("data"),
-            ],
+        body: Center(
+          child: Text(
+            "Please create Tune preview UI hereasasadas as asdad.",
+            style: TextStyle(
+                color: Colors.pink,
+                fontWeight: FontWeight.bold,
+                fontSize: 20.0),
+            textAlign: TextAlign.center,
           ),
-        )
-        //HomeBannerScreen(),
-        );
+        ));
+    //HomeBannerScreen(),
   }
 }

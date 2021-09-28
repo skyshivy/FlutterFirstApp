@@ -63,7 +63,9 @@ class ImageContainer extends StatelessWidget {
         onTap: () {
           print("image clicked $context");
           Navigator.push(context, MaterialPageRoute(builder: (context) {
-            var tunePreview = TunePreview();
+            var tunePreview = TunePreview(
+              title: "ImageContainer",
+            );
             return tunePreview;
           }));
         },
