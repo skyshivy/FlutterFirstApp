@@ -31,6 +31,26 @@ class HomeScreen extends StatelessWidget {
               // HomeTopList(),
               // SizedBox(height: 40),
               HomeCategory(),
+              Container(
+                child: Center(
+                  child: Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: Colors.teal,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.8),
+                          blurRadius: 10,
+                          offset: Offset(0, 0), // Shadow position
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 100),
             ],
           ),
         )

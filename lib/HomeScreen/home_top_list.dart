@@ -25,7 +25,7 @@ class HomeTopList extends StatelessWidget {
             return Container(
               child: Row(
                 children: [
-                  SizedBox(width: index == 0 ? 20 : 10),
+                  SizedBox(width: index == 0 ? 10 : 0),
                   //Text("Index = $index"),
                   TuneCell(index: index),
                 ],
@@ -48,19 +48,18 @@ class TuneCell extends StatelessWidget {
       padding: EdgeInsets.all(10),
       height: 200,
       width: 170,
-      decoration: BoxDecoration(boxShadow: [
-        BoxShadow(
-          color: Colors.teal.withOpacity(0.1),
-          spreadRadius: 1,
-          blurRadius: 7,
-          offset: Offset(0, 0), // changes position of shadow
-        ),
-      ]),
       //color: Colors.black12,
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.black12,
-          borderRadius: BorderRadius.all(Radius.circular(10)),
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(10),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.3),
+              blurRadius: 2,
+              offset: Offset(0, 0), // Shadow position
+            ),
+          ],
         ),
         child: Column(
           children: [

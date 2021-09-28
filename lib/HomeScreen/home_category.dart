@@ -24,6 +24,7 @@ class HomeCategory extends StatelessWidget {
             },
             child: Container(
               //padding: EdgeInsets.all(10),
+
               child: ClipRRect(
                 borderRadius: BorderRadius.all(
                   Radius.circular(10.0),
