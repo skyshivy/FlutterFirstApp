@@ -20,37 +20,33 @@ class HomeScreen extends StatelessWidget {
               HomeBannerScreen(),
               //SizedBox(height: 40),
               //HomeTopTab(),
-              myAppTab((index) {
-                print("Buttontapped is $index");
-              }),
+              Divider(
+                //color: Colors.teal,
+                height: 40,
+                thickness: 0.5,
+              ),
+              Container(
+                padding: EdgeInsets.only(left: 12),
+                child: myAppTab((index) {
+                  print("Buttontapped is $index");
+                }),
+              ),
               SizedBox(height: 10),
               HomeTopList(),
-              // SizedBox(height: 40),
-              // HomeTopList(),
-              // SizedBox(height: 40),
-              // HomeTopList(),
-              // SizedBox(height: 40),
-              HomeCategory(),
+              SizedBox(height: 20),
+              Divider(
+                //color: Colors.teal,
+                height: 20,
+                thickness: 0.5,
+              ),
               Container(
-                child: Center(
-                  child: Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                      color: Colors.teal,
-                      borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.8),
-                          blurRadius: 10,
-                          offset: Offset(0, 0), // Shadow position
-                        ),
-                      ],
-                    ),
-                  ),
+                padding: EdgeInsets.only(left: 15),
+                child: Text(
+                  "Category",
+                  style: TextStyle(fontWeight: FontWeight.w800, fontSize: 30),
                 ),
               ),
-              SizedBox(height: 100),
+              HomeCategory(),
             ],
           ),
         )

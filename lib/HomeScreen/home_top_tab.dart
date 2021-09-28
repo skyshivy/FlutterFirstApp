@@ -20,7 +20,14 @@ class _myAppState extends State<myAppTab> {
   int selected = 0;
 
   //var tabItems;
-  final tabItems = ["New Release", "Just For You"];
+  final tabItems = [
+    "New Release",
+    "Just For You",
+    "Top Chart",
+    "Hindi",
+    "English",
+    "Japanees",
+  ];
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -31,7 +38,7 @@ class _myAppState extends State<myAppTab> {
         itemCount: tabItems.length,
         itemBuilder: (context, i) {
           return Container(
-            padding: EdgeInsets.symmetric(horizontal: 6, vertical: 5),
+            padding: EdgeInsets.symmetric(horizontal: 4, vertical: 5),
             child: SizedBox(
               height: 35,
               child: Container(
@@ -55,7 +62,7 @@ class _myAppState extends State<myAppTab> {
                 child: Container(
                   padding: EdgeInsets.all(0),
                   child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    padding: EdgeInsets.symmetric(horizontal: 0),
                     child: MaterialButton(
                       child: Text(
                         tabItems[i],
