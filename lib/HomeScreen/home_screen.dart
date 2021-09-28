@@ -19,7 +19,9 @@ class HomeScreen extends StatelessWidget {
               HomeBannerScreen(),
               //SizedBox(height: 40),
               //HomeTopTab(),
-              myAppTab(),
+              myAppTab((index) {
+                print("Buttontapped is $index");
+              }),
               SizedBox(height: 10),
               HomeTopList(),
               SizedBox(height: 40),

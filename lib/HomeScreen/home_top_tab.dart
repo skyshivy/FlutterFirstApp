@@ -8,12 +8,17 @@ import 'package:flutter/material.dart';
 // }
 
 class myAppTab extends StatefulWidget {
+  final ValueChanged<int> onClick; //VoidCallback<int> onClick();
+
+  myAppTab(this.onClick);
   @override
   _myAppState createState() => _myAppState();
 }
 
 class _myAppState extends State<myAppTab> {
   int selected = 0;
+
+  //var tabItems;
   final tabItems = ["New Release", "Just For You"];
   @override
   Widget build(BuildContext context) {
@@ -57,8 +62,7 @@ class _myAppState extends State<myAppTab> {
                           selected = i;
                         });
 
-                        print("tapped $selected)");
-                        print("tapped i $i)");
+                        print("tapped \n selected =  $selected \n i = $i");
                       },
                       minWidth: 10,
                     ),
