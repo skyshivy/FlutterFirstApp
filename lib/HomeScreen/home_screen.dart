@@ -22,11 +22,12 @@ class HomeScreen extends StatelessWidget {
               //HomeTopTab(),
               Divider(
                 //color: Colors.teal,
-                height: 40,
+                height: 5,
                 thickness: 0.5,
               ),
+              SizedBox(height: 20),
               Container(
-                padding: EdgeInsets.only(left: 12),
+                padding: EdgeInsets.only(left: 3),
                 child: myAppTab((index) {
                   print("Buttontapped is $index");
                 }),
@@ -43,7 +44,7 @@ class HomeScreen extends StatelessWidget {
                 padding: EdgeInsets.only(left: 15),
                 child: Text(
                   "Category",
-                  style: TextStyle(fontWeight: FontWeight.w800, fontSize: 30),
+                  style: TextStyle(fontWeight: FontWeight.w900, fontSize: 25),
                 ),
               ),
               HomeCategory(),

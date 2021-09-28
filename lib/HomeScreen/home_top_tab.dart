@@ -38,7 +38,7 @@ class _myAppState extends State<myAppTab> {
         itemCount: tabItems.length,
         itemBuilder: (context, i) {
           return Container(
-            padding: EdgeInsets.symmetric(horizontal: 4, vertical: 5),
+            padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
             child: SizedBox(
               height: 35,
               child: Container(

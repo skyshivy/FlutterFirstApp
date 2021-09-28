@@ -1,3 +1,4 @@
+import 'package:first_flutter_app/TunePreview/tune_preview.dart';
 import 'package:flutter/material.dart';
 
 class HomeCategory extends StatelessWidget {
@@ -6,20 +7,28 @@ class HomeCategory extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      padding: EdgeInsets.all(15),
+      padding: EdgeInsets.all(5),
       height: 100 * items,
       child: GridView.builder(
         itemCount: 6,
         physics: NeverScrollableScrollPhysics(),
         scrollDirection: Axis.vertical,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, mainAxisSpacing: 8, crossAxisSpacing: 8),
+            crossAxisCount: 2, mainAxisSpacing: 2, crossAxisSpacing: 2),
         itemBuilder: (context, index) {
           return Container(
               padding: EdgeInsets.all(5),
               child: GestureDetector(
                 onTap: () {
                   print("category tapped $index");
+                  var push = Navigator.push(context, MaterialPageRoute(
+                      //fullscreenDialog: true,
+                      builder: (context) {
+                    var tunePreview = TunePreview(
+                      title: "HomeTopList cell tap",
+                    );
+                    return tunePreview;
+                  }));
                 },
                 child: Container(
                   //padding: EdgeInsets.all(10),
@@ -39,7 +48,7 @@ class HomeCategory extends StatelessWidget {
                     child: ClipRRect(
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                       child: Image.network(
-                        "https://picsum.photos/id/5$index/200",
+                        "https://picsum.photos/id/1$index/300/200",
                         fit: BoxFit.cover,
                       ),
                     ),

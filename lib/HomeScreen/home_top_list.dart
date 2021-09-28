@@ -7,13 +7,15 @@ class HomeTopList extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         print("Cell Tapped");
-        var push =
-            Navigator.push(context, MaterialPageRoute(builder: (context) {
-          var tunePreview = TunePreview(
-            title: "HomeTopList cell tap",
-          );
-          return tunePreview;
-        }));
+        showBottomSheet(
+            context: context,
+            builder: (context) => Container(
+                  color: Colors.transparent,
+                  //height: 500,
+                  child: TunePreview(
+                    title: "HomeTopList cell tap",
+                  ),
+                ));
       },
       child: Container(
         // color: Colors.amber,
@@ -25,7 +27,7 @@ class HomeTopList extends StatelessWidget {
             return Container(
               child: Row(
                 children: [
-                  SizedBox(width: index == 0 ? 10 : 0),
+                  SizedBox(width: index == 0 ? 3 : 0),
                   //Text("Index = $index"),
                   TuneCell(index: index),
                 ],
@@ -45,7 +47,7 @@ class TuneCell extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.all(6),
       height: 200,
       width: 170,
       //color: Colors.black12,
@@ -81,8 +83,8 @@ class ImageContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 120,
-      width: 150,
+      height: 130,
+      //width: 170,
       //borderRadius: BorderRadius.circular(300.0),
 
       child: Container(
@@ -92,7 +94,7 @@ class ImageContainer extends StatelessWidget {
             topRight: const Radius.circular(10.0),
           ),
           child: Image.network(
-            "https://picsum.photos/id/1$index/200",
+            "https://picsum.photos/id/11$index/300/200",
             fit: BoxFit.cover,
           ),
         ),
