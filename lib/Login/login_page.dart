@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -23,27 +24,36 @@ class LoginPage extends StatelessWidget {
             children: [
               Spacer(),
               Container(
-                  //height: 40,
+                  height: 45,
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   color: Colors.transparent,
                   child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    padding: EdgeInsets.symmetric(horizontal: 10),
                     color: Colors.white,
-                    child: TextField(
-                      decoration: const InputDecoration(
-                          hintText: 'Enter your mobile number'),
+                    child: Center(
+                      child: TextField(
+                        keyboardType: TextInputType.phone,
+                        decoration: const InputDecoration.collapsed(
+                          hintText: 'Enter your mobile number',
+                        ),
+                      ),
                     ),
                   )),
+              SizedBox(height: 20),
               Container(
-                  //height: 40,
+                  height: 45,
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   color: Colors.transparent,
                   child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    padding: EdgeInsets.symmetric(horizontal: 10),
                     color: Colors.white,
-                    child: TextField(
-                      decoration: const InputDecoration(
-                          hintText: 'Enter your password'),
+                    child: Center(
+                      child: TextField(
+                        obscureText: true,
+                        enableSuggestions: true,
+                        decoration: const InputDecoration.collapsed(
+                            hintText: 'Enter your password'),
+                      ),
                     ),
                   )),
               SizedBox(height: 20),
