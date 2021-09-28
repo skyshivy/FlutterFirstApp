@@ -9,7 +9,7 @@ class TunePreview extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text(title),
-          backgroundColor: Colors.pink,
+          backgroundColor: Colors.teal,
           // elevation: 0.0,
         ),
         body: Center(

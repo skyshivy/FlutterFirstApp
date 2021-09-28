@@ -36,7 +36,7 @@ class _myAppState extends State<myAppTab> {
               height: 35,
               child: Container(
                 decoration: BoxDecoration(
-                  color: i == selected ? Colors.pink : Colors.white,
+                  color: i == selected ? Colors.teal : Colors.white,
                   borderRadius: BorderRadius.all(
                     Radius.circular(5),
                   ),

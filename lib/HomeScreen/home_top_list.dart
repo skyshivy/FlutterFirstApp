@@ -17,7 +17,7 @@ class HomeTopList extends StatelessWidget {
       },
       child: Container(
         // color: Colors.amber,
-        height: 180,
+        height: 190,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: 10,
@@ -27,7 +27,7 @@ class HomeTopList extends StatelessWidget {
                 children: [
                   SizedBox(width: index == 0 ? 20 : 10),
                   //Text("Index = $index"),
-                  TuneCell(),
+                  TuneCell(index: index),
                 ],
               ),
             );
@@ -39,11 +39,23 @@ class HomeTopList extends StatelessWidget {
 }
 
 class TuneCell extends StatelessWidget {
+  final int index;
+
+  const TuneCell({Key? key, required this.index}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 180,
-      width: 150,
+      padding: EdgeInsets.all(10),
+      height: 200,
+      width: 170,
+      decoration: BoxDecoration(boxShadow: [
+        BoxShadow(
+          color: Colors.teal.withOpacity(0.1),
+          spreadRadius: 1,
+          blurRadius: 7,
+          offset: Offset(0, 0), // changes position of shadow
+        ),
+      ]),
       //color: Colors.black12,
       child: Container(
         decoration: BoxDecoration(
@@ -52,7 +64,7 @@ class TuneCell extends StatelessWidget {
         ),
         child: Column(
           children: [
-            ImageContainer(),
+            ImageContainer(index: index),
             Spacer(),
             CardButtonContainer(),
             Spacer(),
@@ -64,10 +76,13 @@ class TuneCell extends StatelessWidget {
 }
 
 class ImageContainer extends StatelessWidget {
+  final int index;
+
+  const ImageContainer({Key? key, required this.index}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 130,
+      height: 120,
       width: 150,
       //borderRadius: BorderRadius.circular(300.0),
 
@@ -78,7 +93,7 @@ class ImageContainer extends StatelessWidget {
             topRight: const Radius.circular(10.0),
           ),
           child: Image.network(
-            "https://picsum.photos/id/1/200",
+            "https://picsum.photos/id/1$index/200",
             fit: BoxFit.cover,
           ),
         ),
