@@ -1,3 +1,4 @@
+import 'package:first_flutter_app/TunePreview/tune_preview.dart';
 import 'package:flutter/material.dart';
 
 class HomeTopList extends StatelessWidget {
@@ -58,14 +59,23 @@ class ImageContainer extends StatelessWidget {
       width: 150,
       //borderRadius: BorderRadius.circular(300.0),
 
-      child: ClipRRect(
-        borderRadius: BorderRadius.only(
-          topLeft: const Radius.circular(10.0),
-          topRight: const Radius.circular(10.0),
-        ),
-        child: Image.network(
-          "https://picsum.photos/id/1/200",
-          fit: BoxFit.cover,
+      child: GestureDetector(
+        onTap: () {
+          print("image clicked $context");
+          Navigator.push(context, MaterialPageRoute(builder: (context) {
+            var tunePreview = TunePreview();
+            return tunePreview;
+          }));
+        },
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+            topLeft: const Radius.circular(10.0),
+            topRight: const Radius.circular(10.0),
+          ),
+          child: Image.network(
+            "https://picsum.photos/id/1/200",
+            fit: BoxFit.cover,
+          ),
         ),
       ),
     );

@@ -1,3 +1,4 @@
+import 'package:first_flutter_app/TunePreview/tune_preview.dart';
 import 'package:flutter/material.dart';
 
 // class HomeTopTab extends StatelessWidget {
@@ -10,7 +11,7 @@ import 'package:flutter/material.dart';
 class myAppTab extends StatefulWidget {
   final ValueChanged<int> onClick; //VoidCallback<int> onClick();
 
-  myAppTab(this.onClick);
+  const myAppTab(this.onClick, {Key? key}) : super(key: key);
   @override
   _myAppState createState() => _myAppState();
 }
@@ -35,7 +36,7 @@ class _myAppState extends State<myAppTab> {
               height: 35,
               child: Container(
                 decoration: BoxDecoration(
-                  color: i == selected ? Colors.blue : Colors.white,
+                  color: i == selected ? Colors.pink : Colors.white,
                   borderRadius: BorderRadius.all(
                     Radius.circular(5),
                   ),
@@ -56,7 +57,11 @@ class _myAppState extends State<myAppTab> {
                   child: Container(
                     padding: EdgeInsets.symmetric(horizontal: 5),
                     child: MaterialButton(
-                      child: Text(tabItems[i]),
+                      child: Text(
+                        tabItems[i],
+                        style: TextStyle(
+                            color: i == selected ? Colors.white : Colors.black),
+                      ),
                       onPressed: () {
                         setState(() {
                           selected = i;
