@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'HomeScreen/home_screen.dart';
 
 void main() {
-  // main app test commit
+  // main app test commit today
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
