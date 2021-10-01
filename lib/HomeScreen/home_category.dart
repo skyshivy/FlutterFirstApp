@@ -2,7 +2,8 @@ import 'package:first_flutter_app/TunePreview/tune_preview.dart';
 import 'package:flutter/material.dart';
 
 class HomeCategory extends StatelessWidget {
-  final double items = 1;
+  final double items = 6;
+  //GlobalKey _keyRed = GlobalKey();
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -22,6 +23,7 @@ class HomeCategory extends StatelessWidget {
               child: GestureDetector(
                 onTap: () {
                   print("category tapped $index");
+
                   var push = Navigator.push(context, MaterialPageRoute(
                       //fullscreenDialog: true,
                       builder: (context) {
@@ -33,7 +35,7 @@ class HomeCategory extends StatelessWidget {
                 },
                 child: Container(
                   //padding: EdgeInsets.all(10),
-
+                  //key: index.toString(),
                   child: Container(
                     decoration: BoxDecoration(
                       color: Colors.white,
