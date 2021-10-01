@@ -8,7 +8,7 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "First App",
-      home: LoginPage(),
+      home: HomeScreen(),
       //Text("sky"), //HomeScreen(),
     ),
   );

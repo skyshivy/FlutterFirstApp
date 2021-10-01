@@ -2,16 +2,17 @@ import 'package:first_flutter_app/TunePreview/tune_preview.dart';
 import 'package:flutter/material.dart';
 
 class HomeCategory extends StatelessWidget {
-  final double items = 6;
+  final double items = 1;
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
       padding: EdgeInsets.all(5),
-      height: 100 * items,
+      //height: 100 * items,
       child: GridView.builder(
-        itemCount: 6,
+        itemCount: items.toInt(),
         physics: NeverScrollableScrollPhysics(),
+        shrinkWrap: true,
         scrollDirection: Axis.vertical,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, mainAxisSpacing: 2, crossAxisSpacing: 2),
