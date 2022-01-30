@@ -9,7 +9,7 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "First App",
-      home: TunePreview(title: "Preview"), //HomeScreen(),
+      home: HomeScreen(),
       //Text("sky"), //HomeScreen(),
     ),
   );
